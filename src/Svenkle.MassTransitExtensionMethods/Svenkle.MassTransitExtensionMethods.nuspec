@@ -13,5 +13,9 @@
     <description>A collection of C# extension methods for Mass Transit.</description>
     <copyright>Copyright © Svenkle 2017</copyright>
     <tags>masstransit extensions utility</tags>
+    <dependencies>
+      <dependency id="MassTransit" version="3.5.5" />
+      <dependency id="Svenkle.ExtensionMethods" version="1.0.6269.24745" />
+    </dependencies>
   </metadata>
 </package>
