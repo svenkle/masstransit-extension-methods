@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using MassTransit;
 
 namespace Svenkle.MassTransitExtensionMethods
@@ -7,7 +8,7 @@ namespace Svenkle.MassTransitExtensionMethods
     {
         public static void Send(this ISendEndpoint sendEndpoint, Type interfaceType, object message)
         {
-            var method = typeof(SendEndpointExtensions).GetMethod(nameof(CallSendEndpointSend));
+            var method = typeof(SendEndpointExtensions).GetMethod(nameof(CallSendEndpointSend), BindingFlags.NonPublic | BindingFlags.Static);
             var genericMethod = method.MakeGenericMethod(interfaceType);
             genericMethod.Invoke(null, new[] { sendEndpoint, message });
         }
