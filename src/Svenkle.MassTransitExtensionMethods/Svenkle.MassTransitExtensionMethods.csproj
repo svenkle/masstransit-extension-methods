@@ -54,9 +54,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISendEndpointExtensions.cs" />
-    <Compile Include="IPublishEndpointExtensions.cs" />
-    <Compile Include="IBusExtensions.cs" />
+    <Compile Include="SendEndpointExtensions.cs" />
+    <Compile Include="PublishEndpointExtensions.cs" />
+    <Compile Include="BusExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
